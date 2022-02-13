@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+header {
+    padding: 20px 35px;
+    background-color: #2b91a6;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-height: fit-content;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header h1 {
+    width: 30%;
+    text-align: center;
+}
+
+header nav {
+    margin: 7px 0;
+    width: 50%;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+header nav ul li a {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 1.55vw;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+    align-items: center;
+}
+
+header div {
+    width: 15%;
+    margin: 10px;  
+}
+.profile-photo img {
+    width: 95%;
+    border-radius: 30%;
+}
+
+section {
+    padding: 30px;  
+}
+
+.work {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+.section-title {
+    z-index: 9999;
+    width: 20%;
+    height: fit-content;
+    border-right: 3px solid black;
+    text-align: right;
+}
+
+.projects {
+    width: 75%;
+    padding: 10px;
+}
+.lead-project {
+    position: relative;
+    margin: 10px;
+}
+.lead-project img {
+    width: 100%;
+}
+.project {
+    width: 50%;
+    position: relative;
+    margin: 10px;
+}
+.project img {
+    width: 100%;
+}
+.lead-project .project-title {
+    position: absolute;
+    bottom: 50px; 
+}
+.project-title {
+    position: absolute;
+    bottom: 50px;
+}
+
+.pair {
+    width: 100%;
+    display: flex;
+    margin: 10px auto;
+    flex-flow: row;
+    justify-content: space-around;
+}
