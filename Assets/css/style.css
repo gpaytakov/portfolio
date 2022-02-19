@@ -1,3 +1,7 @@
+:root {
+    --border-and-project-title-bg-color: lightblue;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -20,27 +24,41 @@ header {
 header h1 {
     width: 30%;
     text-align: center;
+    font-size: 1.5em;
+}
+
+header h1 span {
+    font-size: 1em;
 }
 
 header nav {
     margin: 7px 0;
     width: 50%;
+    height: auto;
 }
 
 header nav ul {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     list-style: none;
+    vertical-align: middle;
+    height: 100%;
 }
 
+header li {
+    vertical-align: middle;
+}
 header nav ul li a {
+    align-items: center;
     padding: 10px 15px;
     font-weight: lighter;
-    font-size: 1.55vw;
+    font-size: 3vw;
     text-shadow: 0 0 20px rgba(255, 255, 255, 1);
-    align-items: center;
+    text-decoration: none;
+    color: black;
 }
 
 header div {
@@ -48,31 +66,42 @@ header div {
     margin: 10px;  
 }
 .profile-photo img {
-    width: 95%;
+    width: 80%;
     border-radius: 30%;
 }
 
 section {
-    padding: 30px;  
+    padding: 30px;
+    width: 100%;
+    margin: 10 auto;
+    display: flex;
+    justify-content: space-around;  
 }
 
-.work {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-around;
+article.resume {
+    margin: 10px;
 }
 .section-title {
-    z-index: 9999;
     width: 20%;
-    height: fit-content;
-    border-right: 3px solid black;
+    height: auto;
     text-align: right;
+    font-size: 30px;
+    border-right: 3px solid black;
+    padding-right: 5px;
 }
 
-.projects {
-    width: 75%;
+.projects, .resume, .contact-info {
+    width: 80%;
     padding: 10px;
+}
+
+.resume ul, h3 {
+    list-style: none;
+    padding: 10px;
+}
+
+.resume ul li {
+    padding: 5px;
 }
 .lead-project {
     position: relative;
@@ -80,6 +109,8 @@ section {
 }
 .lead-project img {
     width: 100%;
+    height: 200px;
+    border: 5px solid var(--border-and-project-title-bg-color);
 }
 .project {
     width: 50%;
@@ -88,20 +119,51 @@ section {
 }
 .project img {
     width: 100%;
-}
-.lead-project .project-title {
-    position: absolute;
-    bottom: 50px; 
-}
-.project-title {
-    position: absolute;
-    bottom: 50px;
+    height: 200px;
+    border: 5px solid var(--border-and-project-title-bg-color);
 }
 
+.project-title {
+    position: absolute;
+    bottom: 20px;
+    background-color: var(--border-and-project-title-bg-color);
+}
 .pair {
     width: 100%;
     display: flex;
     margin: 10px auto;
     flex-flow: row;
     justify-content: space-around;
+}
+.reach-me {
+    position: relative;
+}
+.contact-info {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 980px) {
+    header {
+        padding-bottom: 0;
+        justify-content: center;
+        position: relative;
+      }
+    
+      header h1 {
+        width: 100%;
+        text-align: center;
+      }
+    
+      header nav ul {
+        width: 100%;
+        justify-content: center;
+      }
+    
+      header nav ul li a {
+        font-size: 20px;
+      }
 }
